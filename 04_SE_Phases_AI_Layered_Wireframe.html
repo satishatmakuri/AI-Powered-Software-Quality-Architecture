@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Output #4 — SE Phases × 4-Layer AI Architecture</title>
+<style>
+  *{box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif;}
+  body{margin:0;padding:18px;background:#F4F6FA;color:#222;}
+  h1{margin:0;font-size:20px;color:#0B3D91;}
+  .subtitle{color:#555;font-size:12px;margin:4px 0 14px 0;}
+  table{border-collapse:separate;border-spacing:6px;width:100%;table-layout:fixed;}
+  thead th{background:#0B3D91;color:#fff;padding:8px;font-size:12px;border-radius:4px;text-align:center;}
+  th.layer{background:#222;color:#fff;width:140px;text-align:left;padding:8px;font-size:12px;vertical-align:top;border-radius:4px;}
+  td{vertical-align:top;padding:8px;font-size:11.5px;border-radius:4px;}
+  .wp{background:#FFF3E0;border:1px solid #B96A00;}
+  .ap{background:#E3F2FD;border:1px solid #003F73;}
+  .ag{background:#E8F5E9;border:1px solid #2E7D32;}
+  .dt{background:#FCE4EC;border:1px solid #9C27B0;}
+  .phase-color{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle;}
+  .pc1{background:#1F77B4;} .pc2{background:#2CA02C;} .pc3{background:#9467BD;}
+  .pc4{background:#FF7F0E;} .pc5{background:#17BECF;} .pc6{background:#D62728;}
+  .pc7{background:#8C564B;} .pc8{background:#7F7F7F;}
+  .backbone{margin-top:14px;background:#0B3D91;color:#fff;padding:10px 14px;border-radius:4px;font-size:12px;}
+  .loop{margin-top:8px;padding:8px;background:#FFEAEA;color:#7A0000;border-left:4px solid #D62728;font-size:12px;border-radius:3px;}
+  .chip{display:inline-block;padding:1px 5px;background:#fff;color:#333;font-size:10px;border:1px solid #DDD;border-radius:8px;margin:1px;}
+</style>
+</head>
+<body>
+<h1>Output #4 — SE Phases × 4-Layer AI Architecture</h1>
+<div class="subtitle">Rows = AI Layers (Work Process / Application / Agent / Data) · Columns = SE Phases (P1 → P8). The dashed feedback loop (P8 → P1) closes the cycle.</div>
+
+<table>
+  <thead>
+    <tr>
+      <th class="layer">Layer ▼ / Phase ►</th>
+      <th><span class="phase-color pc1"></span>P1. Requirements</th>
+      <th><span class="phase-color pc2"></span>P2. Arch & Design</th>
+      <th><span class="phase-color pc3"></span>P3. Implementation</th>
+      <th><span class="phase-color pc4"></span>P4. Test Planning</th>
+      <th><span class="phase-color pc5"></span>P5. Build & Integ</th>
+      <th><span class="phase-color pc6"></span>P6. V&V</th>
+      <th><span class="phase-color pc7"></span>P7. Release</th>
+      <th><span class="phase-color pc8"></span>P8. Post-Release</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="layer">Work Process<br><span style="font-weight:400;font-size:10px;">Biz Process</span></th>
+      <td class="wp">PM · Solution Arch · Customer PgM<br><span class="chip">P1.A1–A5</span></td>
+      <td class="wp">Solution & Security Architects · Tech Leads<br><span class="chip">P2.A1–A5</span></td>
+      <td class="wp">FW / Driver / Automation Engineers<br><span class="chip">P3.A1–A5</span></td>
+      <td class="wp">QA Architect · Test Lead<br><span class="chip">P4.A1–A5</span></td>
+      <td class="wp">Build / Release / Integration<br><span class="chip">P5.A1–A5</span></td>
+      <td class="wp">QA Test · Perf · Compliance · Security · Lab Operators<br><span class="chip">P6.A1–A9</span></td>
+      <td class="wp">Release Mgr · Customer QE · Compliance Officer<br><span class="chip">P7.A1–A5</span></td>
+      <td class="wp">Support · Reliability · FA Lab · PM<br><span class="chip">P8.A1–A5</span></td>
+    </tr>
+    <tr>
+      <th class="layer">Application<br><span style="font-weight:400;font-size:10px;">Viewer / I-O</span></th>
+      <td class="ap">Req Portal · RFQ Inbox<br>RTM Explorer · Req-Bot</td>
+      <td class="ap">Design Studio · ADR Editor<br>C4/UML Renderer · Threat Canvas<br>API Workbench</td>
+      <td class="ap">IDE Plug-in · PR Review UI<br>Static-Analysis Dash · UT Workbench</td>
+      <td class="ap">Test Mgmt UI · Risk Workbench<br>Workload Designer · Lab Matrix Viz</td>
+      <td class="ap">CI/CD Dash · Artifact Browser<br>BVT Gate · Defect Triage Inbox</td>
+      <td class="ap">V&V Cockpit · Compliance Console<br>Perf/QoS Dash · RCA Workbench<br>Robotics Console · Lab Reservation</td>
+      <td class="ap">Release Readiness · Notes Studio<br>Qual Portal · Compliance Pack<br>Secure Dist UI</td>
+      <td class="ap">Field Health Dash · RMA/FA Workbench<br>VoC Console · Hotfix Cockpit<br>KB Browser</td>
+    </tr>
+    <tr>
+      <th class="layer">Agent<br><span style="font-weight:400;font-size:10px;">Controller</span></th>
+      <td class="ag">Req-Extraction · Ambiguity/INVEST<br>Spec-Diff · RTM-Linker<br>Review-Pack Composer</td>
+      <td class="ag">Arch Pattern Recommender · ADR Drafter<br>UML Gen · NVMe Cmd-Table Gen<br>Schema Synth · DFMEA / STRIDE</td>
+      <td class="ag">Code Gen · Refactor · AI Reviewer<br>Static-Fix Auto-PR · UT Gen<br>Coverage Gap</td>
+      <td class="ag">Test Plan Gen · Test Case Gen<br>Workload Synth (FIO/IOMeter)<br>Env Matrix Optimizer</td>
+      <td class="ag">Self-Healing CI · Build Signer<br>Integration Orchestrator · BVT Gate<br>Defect Auto-Triage + Bisect</td>
+      <td class="ag">Functional Orchestrator · Perf-Regression<br>Compliance (Spec RAG) · Endurance/EOL<br>PLI/Surprise-Removal · Compat Optimizer<br>Fuzz Guide · Test Impact · RCA</td>
+      <td class="ag">Release Risk Score · Notes Drafter<br>Qual Pack Assembler · Compliance Doc<br>Secure Publish</td>
+      <td class="ag">Telemetry Anomaly · RMA/FA Correlator<br>VoC NLP · Hotfix Planner<br>KB Updater (feeds P1)</td>
+    </tr>
+    <tr>
+      <th class="layer">Data<br><span style="font-weight:400;font-size:10px;">Model</span></th>
+      <td class="dt">Req DB · RFQ Object Store<br>Spec RAG (NVMe/JEDEC/UFS)<br>RTM Graph · Stakeholder KG</td>
+      <td class="dt">Design Repo · ADR Store<br>API Registry · Threat Library RAG<br>Pattern Catalogue · Design KG</td>
+      <td class="dt">Git · Code Vector Index<br>Static-Findings DB · UT Repo<br>Coverage Store · Secrets Vault</td>
+      <td class="dt">Test Plan DB · TC Repo<br>Workload Library · Lab Inventory<br>Historical Defect Density</td>
+      <td class="dt">Artifact Repo · Build Telemetry<br>BVT Results · Defect DB<br>Commit Graph (bisect)</td>
+      <td class="dt">Test Exec DB · TS Telemetry (SMART)<br>Perf Baseline · Endurance Trend<br>Spec RAG · Trace/Bus Object Store<br>Failure Pattern Vector Index</td>
+      <td class="dt">Release Catalogue · Customer Profile<br>Compliance Cert Store · Signing Keys<br>Distribution Audit Log</td>
+      <td class="dt">Field Telemetry Lake · RMA/FA DB<br>Customer Tickets · Hotfix Catalogue<br>Lessons-Learned KB · Failure↔FW Graph</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="backbone"><strong>Cross-cutting backbones:</strong> IAM / RBAC · Observability · ModelOps (model + prompt registry, eval, drift) · Knowledge Mesh (unified RAG) · MCP / Agent Orchestration · Human-in-the-Loop fabric</div>
+
+<div class="loop"><strong>Feedback loop:</strong> Data (P8 — Lessons-Learned KB) → Work Process (P1 — Requirements). Closes the cycle so each release is informed by field reality.</div>
+
+</body>
+</html>

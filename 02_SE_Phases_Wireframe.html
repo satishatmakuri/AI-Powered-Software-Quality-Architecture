@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Output #2 — SE Phases Wireframe</title>
+<style>
+  :root{
+    --blue:#1F77B4;--green:#2CA02C;--purple:#9467BD;--orange:#FF7F0E;
+    --cyan:#17BECF;--red:#D62728;--brown:#8C564B;--grey:#7F7F7F;
+    --full:#C9FFB6;--high:#FFF6BF;--partial:#D6E4F0;
+  }
+  *{box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif;}
+  body{margin:0;padding:24px;background:#F5F7FA;color:#222;}
+  header{margin-bottom:18px;}
+  h1{margin:0;font-size:22px;color:#0B3D91;}
+  .subtitle{color:#555;font-size:13px;margin-top:4px;}
+  .grid{display:grid;grid-template-columns:repeat(8,1fr);gap:8px;margin-top:16px;}
+  .col{background:#fff;border-radius:6px;padding:8px;box-shadow:0 1px 3px rgba(0,0,0,.08);min-width:180px;}
+  .ph{padding:10px 8px;color:#fff;font-weight:600;border-radius:4px;text-align:center;font-size:13px;}
+  .p1{background:var(--blue);} .p2{background:var(--green);} .p3{background:var(--purple);}
+  .p4{background:var(--orange);} .p5{background:var(--cyan);} .p6{background:var(--red);}
+  .p7{background:var(--brown);} .p8{background:var(--grey);}
+  .act{margin-top:6px;padding:6px 8px;border:1px solid #DDD;border-left:4px solid transparent;border-radius:3px;font-size:12px;cursor:pointer;transition:transform .1s;}
+  .act:hover{transform:translateX(3px);box-shadow:0 1px 3px rgba(0,0,0,.15);}
+  .full{background:var(--full);border-left-color:#3CB371;}
+  .high{background:var(--high);border-left-color:#DAA520;}
+  .partial{background:var(--partial);border-left-color:#4682B4;}
+  .legend{margin-top:20px;display:flex;gap:14px;flex-wrap:wrap;font-size:12px;align-items:center;}
+  .swatch{display:inline-block;width:14px;height:14px;border-radius:2px;margin-right:5px;vertical-align:middle;border:1px solid #BBB;}
+  .arrow{text-align:center;font-size:22px;color:#0B3D91;}
+  .feedback{margin-top:14px;padding:8px 12px;background:#FFEAEA;border-left:4px solid var(--red);border-radius:3px;font-size:12px;color:#333;}
+  .panel{margin-top:18px;padding:12px;background:#fff;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.08);font-size:13px;}
+  .panel h3{margin:0 0 6px 0;font-size:14px;color:#0B3D91;}
+  .badge{display:inline-block;background:#0B3D91;color:#fff;padding:1px 6px;border-radius:8px;font-size:10px;margin-right:4px;}
+</style>
+</head>
+<body>
+<header>
+  <h1>Output #2 — Software Engineering Phases (Requirements → Post‑Release)</h1>
+  <div class="subtitle">Wireframe for the AI Powered Software Quality Architecture · Memory products (NVMe / SATA / eMMC / UFS / uSD / PSSD). Click any activity for details.</div>
+</header>
+
+<div class="grid">
+  <div class="col"><div class="ph p1">P1. Requirements</div>
+    <div class="act partial" data-d="Stakeholder & customer elicitation (RFQs, JEDEC/NVMe spec deltas).">P1.A1 Stakeholder Elicitation</div>
+    <div class="act partial" data-d="Functional & non-functional spec (perf, endurance, power, thermal).">P1.A2 SRS / FRS / NFR</div>
+    <div class="act high" data-d="LLM-based ambiguity / completeness / testability check.">P1.A3 Ambiguity / Completeness AI</div>
+    <div class="act high" data-d="Auto-link Req ↔ Spec ↔ TC ↔ Defect using embeddings.">P1.A4 RTM</div>
+    <div class="act partial" data-d="AI prepares review pack; human approves and baselines.">P1.A5 Review & Baseline</div>
+  </div>
+  <div class="col"><div class="ph p2">P2. Architecture & Design</div>
+    <div class="act partial" data-d="System / solution architecture (FW + host + lab).">P2.A1 System Arch / ADR</div>
+    <div class="act partial" data-d="Detailed module design – FTL, ECC, HMB, host driver.">P2.A2 Component Design</div>
+    <div class="act high" data-d="API / NVMe admin & I/O cmd table auto-generated from spec.">P2.A3 Interface / API</div>
+    <div class="act high" data-d="Telemetry / SMART / log-page schema auto-derived.">P2.A4 Data Schema</div>
+    <div class="act partial" data-d="AI-assisted design review, DFMEA, threat modeling.">P2.A5 Review / DFMEA / Threat</div>
+  </div>
+  <div class="col"><div class="ph p3">P3. Implementation</div>
+    <div class="act high" data-d="Code authoring via AI completion (FW C, driver, automation).">P3.A1 Code Authoring</div>
+    <div class="act full" data-d="AI refactor agent with regression-safe rewrites.">P3.A2 Refactoring</div>
+    <div class="act full" data-d="AI reviewer agent — security, style, logic.">P3.A3 AI Code Review</div>
+    <div class="act full" data-d="AI triages and auto-PRs the fix for Coverity / MISRA findings.">P3.A4 Static Analysis</div>
+    <div class="act full" data-d="AI generates unit tests from contracts & signatures.">P3.A5 Unit Tests</div>
+  </div>
+  <div class="col"><div class="ph p4">P4. Test Plan & Design</div>
+    <div class="act partial" data-d="Risk-based test strategy.">P4.A1 Test Strategy</div>
+    <div class="act full" data-d="AI plan generator using RTM + historical defect density.">P4.A2 Test Plan Gen</div>
+    <div class="act full" data-d="AI test case generation from SRS + spec clauses.">P4.A3 AI Test Cases</div>
+    <div class="act full" data-d="Workload synthesizer (FIO / IOMeter / NAND patterns).">P4.A4 Test Data Synth</div>
+    <div class="act high" data-d="Minimum-covering OS / BIOS / FW matrix.">P4.A5 Env Matrix</div>
+  </div>
+  <div class="col"><div class="ph p5">P5. Build & Integration</div>
+    <div class="act full" data-d="Self-healing CI; AI repairs broken pipelines.">P5.A1 CI Pipeline</div>
+    <div class="act full" data-d="FW image build, sign, version – fully automated.">P5.A2 FW Build</div>
+    <div class="act high" data-d="Orchestrated FW + driver + host integration.">P5.A3 Integration Test</div>
+    <div class="act full" data-d="AI auto-runs BVT and gates promotion.">P5.A4 BVT</div>
+    <div class="act full" data-d="AI dedupe, classify, assign defect; link to suspect commit.">P5.A5 Defect Auto-Triage</div>
+  </div>
+  <div class="col"><div class="ph p6">P6. Verification & Validation</div>
+    <div class="act full" data-d="Functional NVMe/SATA/eMMC/UFS/uSD/PSSD command-set tests.">P6.A1 Functional</div>
+    <div class="act full" data-d="IOPS / BW / latency-tail / QoS sweeps with AI regression detector.">P6.A2 Performance / QoS</div>
+    <div class="act full" data-d="Spec conformance via RAG over the standard spec.">P6.A3 Compliance</div>
+    <div class="act full" data-d="Endurance / PEC cycling with AI EOL prediction.">P6.A4 Reliability</div>
+    <div class="act full" data-d="PLI / surprise-removal / thermal — robotics-assisted.">P6.A5 Power / Thermal</div>
+    <div class="act high" data-d="Host / OS / BIOS compatibility matrix.">P6.A6 Compatibility</div>
+    <div class="act high" data-d="Sanitize, opal, fw-sign verification, fuzzing.">P6.A7 Security</div>
+    <div class="act full" data-d="AI test impact analysis selects minimum regression set.">P6.A8 Regression</div>
+    <div class="act full" data-d="AI log / trace / bus-capture RCA.">P6.A9 RCA</div>
+  </div>
+  <div class="col"><div class="ph p7">P7. Release</div>
+    <div class="act high" data-d="AI-scored release readiness; humans approve.">P7.A1 Readiness Review</div>
+    <div class="act full" data-d="Release notes auto-drafted from defect DB + change list.">P7.A2 Release Notes</div>
+    <div class="act full" data-d="Customer / OEM qualification pack auto-assembled.">P7.A3 Qual Pack</div>
+    <div class="act high" data-d="Compliance / certification artifacts auto-prepared.">P7.A4 Cert Artifacts</div>
+    <div class="act full" data-d="Secure FW publication via CI/CD release agent.">P7.A5 FW Publication</div>
+  </div>
+  <div class="col"><div class="ph p8">P8. Post-Release</div>
+    <div class="act full" data-d="Fleet-scale field telemetry & SMART anomaly detection.">P8.A1 Field Telemetry</div>
+    <div class="act full" data-d="RMA / FA correlated to FW ver, NAND lot, host model.">P8.A2 RMA / FA</div>
+    <div class="act full" data-d="Voice-of-customer NLP, sentiment, topic clustering.">P8.A3 Customer Feedback</div>
+    <div class="act high" data-d="AI proposes hotfix plan, verifies regression.">P8.A4 Hotfix Triage</div>
+    <div class="act full" data-d="Lessons learned → auto-update KB → seed P1.">P8.A5 Lessons → P1</div>
+  </div>
+</div>
+
+<div class="feedback">
+  <strong>Feedback loop:</strong> P8.A5 (Lessons Learned) feeds back into P1.A1 (Requirements) — closing the loop between field reality and the next release's requirements.
+</div>
+
+<div class="legend">
+  <span><span class="swatch" style="background:var(--full)"></span>Full automation</span>
+  <span><span class="swatch" style="background:var(--high)"></span>High (AI ≥ 80%)</span>
+  <span><span class="swatch" style="background:var(--partial)"></span>Partial (AI assists)</span>
+</div>
+
+<div class="panel" id="detail">
+  <h3>Activity Detail</h3>
+  <div id="detail-body">Hover or click on any activity card above to see its detail and AI automation rationale.</div>
+</div>
+
+<script>
+  document.querySelectorAll('.act').forEach(el=>{
+    el.addEventListener('click',()=>{
+      document.getElementById('detail-body').innerHTML =
+        '<span class="badge">'+el.textContent.split(' ')[0]+'</span>'+el.textContent.substring(el.textContent.indexOf(' ')+1)+
+        '<br><br>'+el.getAttribute('data-d');
+    });
+  });
+</script>
+</body>
+</html>

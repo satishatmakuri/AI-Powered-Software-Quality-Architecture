@@ -1,0 +1,123 @@
+<mxfile host="app.diagrams.net" modified="2026-05-18T00:00:00.000Z" agent="Cowork" version="24.0.0" type="device">
+  <diagram id="se-phases" name="SE Phases">
+    <mxGraphModel dx="2200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="Output #2 — Software Engineering Phases (Requirements → Post-Release)" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0B3D91;" vertex="1" parent="1">
+          <mxGeometry x="40" y="10" width="2320" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Phase headers -->
+        <mxCell id="p1" value="P1. Requirements&#10;Engineering" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1F77B4;fontColor=#FFFFFF;fontSize=14;fontStyle=1;strokeColor=#0B3D91;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="270" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2" value="P2. Architecture&#10;&amp; Design" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2CA02C;fontColor=#FFFFFF;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="70" width="270" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3" value="P3. Implementation&#10;/ Coding" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9467BD;fontColor=#FFFFFF;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="70" width="270" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="p4" value="P4. Test Planning&#10;&amp; Test Design" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF7F0E;fontColor=#FFFFFF;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="70" width="270" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="p5" value="P5. Build&#10;&amp; Integration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17BECF;fontColor=#FFFFFF;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="70" width="270" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="p6" value="P6. Verification&#10;&amp; Validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D62728;fontColor=#FFFFFF;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="70" width="270" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="p7" value="P7. Release Eng.&#10;&amp; Customer Release" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C564B;fontColor=#FFFFFF;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1720" y="70" width="270" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="p8" value="P8. Post-Release&#10;Sustenance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7F7F7F;fontColor=#FFFFFF;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="2000" y="70" width="270" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Activity boxes for P1 -->
+        <mxCell id="p1a1" value="P1.A1 Stakeholder Elicitation" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D6E4F0;strokeColor=#1F77B4;fontSize=11;" vertex="1" parent="1"><mxGeometry x="40" y="150" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p1a2" value="P1.A2 SRS / FRS / NFR Spec" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D6E4F0;strokeColor=#1F77B4;fontSize=11;" vertex="1" parent="1"><mxGeometry x="40" y="195" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p1a3" value="P1.A3 Ambiguity / Completeness AI Check" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF6BF;strokeColor=#1F77B4;fontSize=11;" vertex="1" parent="1"><mxGeometry x="40" y="240" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p1a4" value="P1.A4 RTM (Req-Spec-TC-Defect)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF6BF;strokeColor=#1F77B4;fontSize=11;" vertex="1" parent="1"><mxGeometry x="40" y="285" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p1a5" value="P1.A5 Review &amp; Baseline" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D6E4F0;strokeColor=#1F77B4;fontSize=11;" vertex="1" parent="1"><mxGeometry x="40" y="330" width="270" height="40" as="geometry"/></mxCell>
+
+        <!-- Activity boxes for P2 -->
+        <mxCell id="p2a1" value="P2.A1 System Architecture / ADR" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D6F0D6;strokeColor=#2CA02C;fontSize=11;" vertex="1" parent="1"><mxGeometry x="320" y="150" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p2a2" value="P2.A2 Component / Module Design" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D6F0D6;strokeColor=#2CA02C;fontSize=11;" vertex="1" parent="1"><mxGeometry x="320" y="195" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p2a3" value="P2.A3 Interface / API / NVMe Cmd Design" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF6BF;strokeColor=#2CA02C;fontSize=11;" vertex="1" parent="1"><mxGeometry x="320" y="240" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p2a4" value="P2.A4 Data / Telemetry Schema" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF6BF;strokeColor=#2CA02C;fontSize=11;" vertex="1" parent="1"><mxGeometry x="320" y="285" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p2a5" value="P2.A5 Review / DFMEA / Threat Model" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D6F0D6;strokeColor=#2CA02C;fontSize=11;" vertex="1" parent="1"><mxGeometry x="320" y="330" width="270" height="40" as="geometry"/></mxCell>
+
+        <!-- Activity boxes for P3 -->
+        <mxCell id="p3a1" value="P3.A1 Code Authoring (FW / Drv / Auto)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E4D6F0;strokeColor=#9467BD;fontSize=11;" vertex="1" parent="1"><mxGeometry x="600" y="150" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p3a2" value="P3.A2 Refactoring" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#9467BD;fontSize=11;" vertex="1" parent="1"><mxGeometry x="600" y="195" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p3a3" value="P3.A3 AI Code Review" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#9467BD;fontSize=11;" vertex="1" parent="1"><mxGeometry x="600" y="240" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p3a4" value="P3.A4 Static Analysis + Auto-Fix" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#9467BD;fontSize=11;" vertex="1" parent="1"><mxGeometry x="600" y="285" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p3a5" value="P3.A5 Unit Test Gen + Run" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#9467BD;fontSize=11;" vertex="1" parent="1"><mxGeometry x="600" y="330" width="270" height="40" as="geometry"/></mxCell>
+
+        <!-- Activity boxes for P4 -->
+        <mxCell id="p4a1" value="P4.A1 Test Strategy" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFE4CC;strokeColor=#FF7F0E;fontSize=11;" vertex="1" parent="1"><mxGeometry x="880" y="150" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p4a2" value="P4.A2 Test Plan Generation" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#FF7F0E;fontSize=11;" vertex="1" parent="1"><mxGeometry x="880" y="195" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p4a3" value="P4.A3 AI Test Case Generation" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#FF7F0E;fontSize=11;" vertex="1" parent="1"><mxGeometry x="880" y="240" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p4a4" value="P4.A4 Workload / Test Data Synth" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#FF7F0E;fontSize=11;" vertex="1" parent="1"><mxGeometry x="880" y="285" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p4a5" value="P4.A5 Test Env / Lab Matrix" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF6BF;strokeColor=#FF7F0E;fontSize=11;" vertex="1" parent="1"><mxGeometry x="880" y="330" width="270" height="40" as="geometry"/></mxCell>
+
+        <!-- Activity boxes for P5 -->
+        <mxCell id="p5a1" value="P5.A1 CI Pipeline / SCM" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#17BECF;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1160" y="150" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p5a2" value="P5.A2 FW Build / Sign / Version" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#17BECF;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1160" y="195" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p5a3" value="P5.A3 Integration Testing" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF6BF;strokeColor=#17BECF;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1160" y="240" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p5a4" value="P5.A4 Build Verification Test (BVT)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#17BECF;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1160" y="285" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p5a5" value="P5.A5 Defect Intake / Auto-Triage" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#17BECF;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1160" y="330" width="270" height="40" as="geometry"/></mxCell>
+
+        <!-- Activity boxes for P6 (more, 9 activities) -->
+        <mxCell id="p6a1" value="P6.A1 Functional (NVMe/SATA/eMMC/UFS/uSD/PSSD)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#D62728;fontSize=10;" vertex="1" parent="1"><mxGeometry x="1440" y="150" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p6a2" value="P6.A2 Performance / QoS / Latency-Tail" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#D62728;fontSize=10;" vertex="1" parent="1"><mxGeometry x="1440" y="195" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p6a3" value="P6.A3 Compliance / Spec Conformance" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#D62728;fontSize=10;" vertex="1" parent="1"><mxGeometry x="1440" y="240" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p6a4" value="P6.A4 Reliability / Endurance / PEC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#D62728;fontSize=10;" vertex="1" parent="1"><mxGeometry x="1440" y="285" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p6a5" value="P6.A5 Power Loss / Surprise Removal / Thermal" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#D62728;fontSize=10;" vertex="1" parent="1"><mxGeometry x="1440" y="330" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p6a6" value="P6.A6 Compatibility / Interop" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF6BF;strokeColor=#D62728;fontSize=10;" vertex="1" parent="1"><mxGeometry x="1440" y="375" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p6a7" value="P6.A7 Security / Sanitize / Fuzz" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF6BF;strokeColor=#D62728;fontSize=10;" vertex="1" parent="1"><mxGeometry x="1440" y="420" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p6a8" value="P6.A8 Regression (AI Test Selection)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#D62728;fontSize=10;" vertex="1" parent="1"><mxGeometry x="1440" y="465" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p6a9" value="P6.A9 AI Log/Trace RCA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#D62728;fontSize=10;" vertex="1" parent="1"><mxGeometry x="1440" y="510" width="270" height="40" as="geometry"/></mxCell>
+
+        <!-- Activity boxes for P7 -->
+        <mxCell id="p7a1" value="P7.A1 Release Readiness Review" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F0DDD6;strokeColor=#8C564B;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1720" y="150" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p7a2" value="P7.A2 AI-Drafted Release Notes" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#8C564B;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1720" y="195" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p7a3" value="P7.A3 Customer / OEM Qual Pack" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#8C564B;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1720" y="240" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p7a4" value="P7.A4 Compliance Cert Artifacts" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF6BF;strokeColor=#8C564B;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1720" y="285" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p7a5" value="P7.A5 Secure FW Publication" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#8C564B;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1720" y="330" width="270" height="40" as="geometry"/></mxCell>
+
+        <!-- Activity boxes for P8 -->
+        <mxCell id="p8a1" value="P8.A1 Field Telemetry / SMART AI Mon" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#7F7F7F;fontSize=11;" vertex="1" parent="1"><mxGeometry x="2000" y="150" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p8a2" value="P8.A2 RMA / FA Correlation" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#7F7F7F;fontSize=11;" vertex="1" parent="1"><mxGeometry x="2000" y="195" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p8a3" value="P8.A3 Voice-of-Customer NLP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#7F7F7F;fontSize=11;" vertex="1" parent="1"><mxGeometry x="2000" y="240" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p8a4" value="P8.A4 Field Hotfix Triage" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF6BF;strokeColor=#7F7F7F;fontSize=11;" vertex="1" parent="1"><mxGeometry x="2000" y="285" width="270" height="40" as="geometry"/></mxCell>
+        <mxCell id="p8a5" value="P8.A5 Lessons-Learned → P1 Feedback" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#7F7F7F;fontSize=11;" vertex="1" parent="1"><mxGeometry x="2000" y="330" width="270" height="40" as="geometry"/></mxCell>
+
+        <!-- Phase-to-phase flow arrows -->
+        <mxCell id="a1" style="endArrow=block;html=1;rounded=0;strokeColor=#0B3D91;strokeWidth=2;" edge="1" parent="1" source="p1" target="p2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a2" style="endArrow=block;html=1;rounded=0;strokeColor=#0B3D91;strokeWidth=2;" edge="1" parent="1" source="p2" target="p3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a3" style="endArrow=block;html=1;rounded=0;strokeColor=#0B3D91;strokeWidth=2;" edge="1" parent="1" source="p3" target="p4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a4" style="endArrow=block;html=1;rounded=0;strokeColor=#0B3D91;strokeWidth=2;" edge="1" parent="1" source="p4" target="p5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a5" style="endArrow=block;html=1;rounded=0;strokeColor=#0B3D91;strokeWidth=2;" edge="1" parent="1" source="p5" target="p6"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a6" style="endArrow=block;html=1;rounded=0;strokeColor=#0B3D91;strokeWidth=2;" edge="1" parent="1" source="p6" target="p7"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a7" style="endArrow=block;html=1;rounded=0;strokeColor=#0B3D91;strokeWidth=2;" edge="1" parent="1" source="p7" target="p8"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- Feedback loop -->
+        <mxCell id="loop" style="endArrow=block;html=1;rounded=0;dashed=1;strokeColor=#D62728;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=1;curved=1;" edge="1" parent="1" source="p8a5" target="p1a1"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="2135" y="640"/><mxPoint x="175" y="640"/></Array></mxGeometry></mxCell>
+
+        <!-- Legend -->
+        <mxCell id="leg-title" value="Legend (cell fill = AI automation potential)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="40" y="680" width="400" height="25" as="geometry"/></mxCell>
+        <mxCell id="leg1" value="Full automation" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C9FFB6;strokeColor=#333;fontSize=11;" vertex="1" parent="1"><mxGeometry x="40" y="710" width="160" height="30" as="geometry"/></mxCell>
+        <mxCell id="leg2" value="High (AI ≥ 80%)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF6BF;strokeColor=#333;fontSize=11;" vertex="1" parent="1"><mxGeometry x="210" y="710" width="160" height="30" as="geometry"/></mxCell>
+        <mxCell id="leg3" value="Partial (AI assists)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D6E4F0;strokeColor=#333;fontSize=11;" vertex="1" parent="1"><mxGeometry x="380" y="710" width="160" height="30" as="geometry"/></mxCell>
+        <mxCell id="leg4" value="Red dashed = Field feedback loop into Requirements (P8.A5 → P1.A1)" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#D62728;" vertex="1" parent="1"><mxGeometry x="560" y="710" width="600" height="30" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
+  </diagram>
+</mxfile>
