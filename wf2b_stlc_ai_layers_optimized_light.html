@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STLC × 4 Layers (Optimized) — Zion Quality Platform (Light · Confluence)</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: #f0f4f9; color: #1e293b; font-size: 13px; }
+
+.wrap { max-width: 100%; overflow: hidden; border: 1px solid #e2e8f0; }
+.hdr { background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%); border-bottom: 3px solid #e2e8f0; padding: 14px 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+.brand { display: flex; align-items: center; gap: 11px; }
+.mark { width: 40px; height: 40px; border-radius: 11px; background: linear-gradient(135deg, #4f46e5, #7c3aed, #db2777); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.05rem; color: #fff; box-shadow: 0 3px 10px rgba(124,58,237,0.3); }
+.bn { font-size: 0.95rem; font-weight: 700; color: #1e293b; }
+.bs { font-size: 0.6rem; color: #64748b; margin-top: 2px; }
+.htitle { font-size: 0.88rem; font-weight: 700; color: #1e293b; text-align: center; }
+.hsub { font-size: 0.62rem; color: #64748b; margin-top: 3px; text-align: center; }
+.htags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tg { padding: 4px 10px; border-radius: 20px; font-size: 0.6rem; font-weight: 600; }
+.tg-1 { background: #ede9fe; border: 1px solid #c4b5fd; color: #6d28d9; }
+.tg-2 { background: #fce7f3; border: 1px solid #f9a8d4; color: #9d174d; }
+.tg-3 { background: #dcfce7; border: 1px solid #86efac; color: #166534; }
+.tg-4 { background: #e0f2fe; border: 1px solid #7dd3fc; color: #0369a1; }
+
+.opt-bar { background: linear-gradient(135deg, #f5f3ff, #fdf2f8); border-bottom: 1px solid #e2e8f0; padding: 9px 22px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 0.62rem; }
+.opt-bar .b { background: linear-gradient(135deg, #7c3aed, #db2777); color: #fff; padding: 3px 9px; border-radius: 5px; font-size: 0.55rem; font-weight: 700; letter-spacing: 0.04em; }
+.opt-bar .s { color: #475569; }
+.opt-bar .s b { color: #1e293b; }
+.opt-bar .d { color: #16a34a; font-weight: 700; }
+
+.ly-bar { background: #f8fafc; border-bottom: 1px solid #e2e8f0; padding: 8px 22px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.ly-ttl { font-size: 0.6rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.1em; }
+.ly-item { display: flex; align-items: center; gap: 6px; font-size: 0.62rem; color: #475569; }
+.ly-sq { width: 9px; height: 9px; border-radius: 2px; }
+.ly-div { width: 1px; height: 14px; background: #e2e8f0; }
+
+.ph-nav { background: #f1f5f9; border-bottom: 1px solid #e2e8f0; padding: 8px 22px; display: flex; align-items: center; gap: 3px; flex-wrap: wrap; }
+.pn { display: flex; align-items: center; gap: 2px; }
+.pp { padding: 3px 9px; border-radius: 5px; font-size: 0.6rem; font-weight: 600; white-space: nowrap; cursor: pointer; }
+.pa { color: #cbd5e1; font-size: 0.75rem; margin: 0 1px; }
+
+.conf-note { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 7px 14px; margin: 12px 22px 0; font-size: 0.63rem; color: #1e40af; display: flex; align-items: center; gap: 8px; }
+
+.mat-wrap { overflow-x: auto; padding: 14px 22px 28px; }
+.matrix { display: grid; grid-template-columns: 200px repeat(10, 215px); min-width: 2350px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.06); background: #fff; }
+
+.mx-corner { background: #f1f5f9; padding: 12px 14px; border-right: 2px solid #cbd5e1; border-bottom: 2px solid #cbd5e1; display: flex; align-items: flex-end; }
+.mx-corner span { font-size: 0.58rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; }
+
+.ph-hdr { padding: 10px 11px; background: #f1f5f9; border-right: 1px solid #e2e8f0; border-bottom: 2px solid #cbd5e1; }
+.ph-hdr:last-child { border-right: none; }
+.phrow { display: flex; align-items: flex-start; gap: 6px; margin-bottom: 5px; }
+.phnum { width: 22px; height: 22px; border-radius: 5px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 0.58rem; font-weight: 800; color: #fff; }
+.phname { font-size: 0.66rem; font-weight: 700; color: #1e293b; line-height: 1.25; flex: 1; }
+.phchips { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 5px; }
+.phchip { font-size: 0.5rem; font-weight: 700; padding: 1px 6px; border-radius: 7px; }
+.ai-chip { background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; }
+.opt-chip { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+.delta-chip { background: #f1f5f9; color: #64748b; border: 1px solid #cbd5e1; font-size: 0.48rem; }
+.phsubs { font-size: 0.51rem; color: #64748b; line-height: 1.4; }
+.phsubs .sli { padding: 1px 0; display: flex; gap: 3px; }
+.phsubs .sid { color: #94a3b8; font-weight: 700; font-family: 'Consolas', monospace; flex-shrink: 0; min-width: 17px; }
+.phsubs .stx { color: #475569; }
+
+.ly-lbl { padding: 12px 14px; border-right: 2px solid #cbd5e1; border-bottom: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 4px; }
+.ly-ico { font-size: 1.05rem; }
+.ly-num { font-size: 0.55rem; font-weight: 700; letter-spacing: 0.06em; font-family: 'Consolas', monospace; }
+.ly-nm { font-size: 0.7rem; font-weight: 700; color: #1e293b; line-height: 1.3; }
+.ly-ds { font-size: 0.56rem; color: #64748b; line-height: 1.4; margin-top: 2px; }
+.last-ly .ly-lbl { border-bottom: none; }
+
+.cell { padding: 9px 10px; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 4px; }
+.cell:last-child { border-right: none; }
+.last-ly .cell { border-bottom: none; }
+
+.ci { display: flex; align-items: flex-start; gap: 5px; padding: 3px 6px; border-radius: 4px; font-size: 0.6rem; border-left: 2px solid transparent; background: #f8fafc; }
+.ci:hover { background: #f1f5f9; }
+.ci-dot { width: 4px; height: 4px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+.ci-txt { flex: 1; color: #374151; line-height: 1.4; }
+.ci-tag { flex-shrink: 0; font-size: 0.46rem; font-weight: 700; padding: 1px 4px; border-radius: 3px; margin-top: 1px; font-family: 'Consolas', monospace; }
+.tag-ai { background: #ede9fe; border: 1px solid #c4b5fd; color: #6d28d9; }
+.tag-ml { background: #e0f2fe; border: 1px solid #7dd3fc; color: #0369a1; }
+.tag-db { background: #dcfce7; border: 1px solid #86efac; color: #166534; }
+.tag-rag { background: #fef3c7; border: 1px solid #fcd34d; color: #92400e; }
+.tag-ui { background: #fce7f3; border: 1px solid #f9a8d4; color: #9d174d; }
+.tag-api { background: #f3e8ff; border: 1px solid #d8b4fe; color: #6b21a8; }
+
+.bg-wp { background: #fafbff; } .bg-app { background: #f9fbff; } .bg-agt { background: #fafaff; } .bg-dat { background: #f7fff9; }
+.lyl-wp { background: #f0f4ff; border-left: 3px solid #6366f1; }
+.lyl-app { background: #f0f9ff; border-left: 3px solid #0ea5e9; }
+.lyl-agt { background: #f5f3ff; border-left: 3px solid #8b5cf6; }
+.lyl-dat { background: #f0fdf4; border-left: 3px solid #10b981; }
+
+.foot { background: #fff; border-top: 1px solid #e2e8f0; padding: 10px 22px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 0.6rem; color: #475569; }
+.foot-c { margin-left: auto; font-size: 0.58rem; color: #94a3b8; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="hdr">
+  <div class="brand">
+    <div class="mark">Z</div>
+    <div><div class="bn">Zion Quality Platform</div><div class="bs">AI-Powered Software Quality Architecture &middot; Multi-Layer AI Agent System</div></div>
+  </div>
+  <div>
+    <div class="htitle">STLC &times; 4-Layer Architecture &mdash; Optimized Phase Scope</div>
+    <div class="hsub">Work Process &middot; Application &middot; Agent &middot; Data &mdash; mapped to all 10 STLC Phases (50 consolidated sub-activities)</div>
+  </div>
+  <div class="htags">
+    <span class="tg tg-1">Wireframe 2b</span>
+    <span class="tg tg-2">Optimized</span>
+    <span class="tg tg-3">Light Theme</span>
+    <span class="tg tg-4">Confluence Ready</span>
+  </div>
+</div>
+
+<div class="opt-bar">
+  <span class="b">OPTIMIZED SCOPE</span>
+  <span class="s">Original sub-activities: <b>79</b></span>
+  <span style="color:#cbd5e1">&rarr;</span>
+  <span class="s">Optimized: <b>50</b></span>
+  <span class="d">&minus;37% items</span>
+  <span style="color:#cbd5e1">|</span>
+  <span class="s">Layered architecture aligned with <b>wf1b consolidated sub-activities</b>; coverage preserved.</span>
+</div>
+
+<div class="ly-bar">
+  <span class="ly-ttl">Architecture Layers</span>
+  <div class="ly-item"><div class="ly-sq" style="background:#6366f1"></div>L1 &middot; Work Process (Biz Process)</div>
+  <div class="ly-div"></div>
+  <div class="ly-item"><div class="ly-sq" style="background:#0ea5e9"></div>L2 &middot; Application (Viewer / UI)</div>
+  <div class="ly-div"></div>
+  <div class="ly-item"><div class="ly-sq" style="background:#8b5cf6"></div>L3 &middot; Agent (Controller / AI)</div>
+  <div class="ly-div"></div>
+  <div class="ly-item"><div class="ly-sq" style="background:#10b981"></div>L4 &middot; Data (Model / Knowledge)</div>
+  <div style="margin-left:auto;font-size:0.58rem;color:#94a3b8">&larr; Scroll horizontally to explore all 10 phases &rarr;</div>
+</div>
+
+<div class="ph-nav" id="phNav"></div>
+
+<div class="conf-note">&#8505;&#65039; <strong>Confluence:</strong> Insert &rarr; Other Macros &rarr; HTML &rarr; paste full file content. Static layout. Horizontal scroll inside the macro frame.</div>
+
+<div class="mat-wrap">
+  <div class="matrix" id="matrix"></div>
+</div>
+
+<div class="foot">
+  <span>AI-Powered Software Quality Architecture &mdash; Multi-Layer AI Agent System &middot; Zion Platform &copy; 2025</span>
+  <span>50 Optimized Sub-Activities &middot; 10 STLC Phases &middot; 4 Architecture Layers</span>
+  <span class="foot-c">Companion to wf1b (optimized phases) &middot; wf2 (original layered)</span>
+</div>
+
+</div>
+
+<script>
+var PHASES = [
+  { n:1, name:"Requirements Analysis & Review", color:"#3B82F6", bg:"#EFF6FF", pct:"75", optCnt:5, origCnt:8,
+    subs:[["1.1","Req Elicitation & Doc Review"],["1.2","NL Req Parsing & Classification"],["1.3","Feasibility, Testability & Quality"],["1.4","Test Basis & RTM Creation"],["1.5","Risk ID & Acceptance Criteria"]] },
+  { n:2, name:"Test Planning", color:"#8B5CF6", bg:"#F5F3FF", pct:"67", optCnt:5, origCnt:9,
+    subs:[["2.1","Test Strategy & Scope"],["2.2","Resource, Schedule & Effort"],["2.3","Risk Assessment & Mitigation"],["2.4","Tool & Entry/Exit Criteria"],["2.5","Test Plan Auto-Generation"]] },
+  { n:3, name:"Test Design & Development", color:"#EC4899", bg:"#FDF2F8", pct:"88", optCnt:5, origCnt:8,
+    subs:[["3.1","Scenario & Test Case Generation"],["3.2","BDD / Gherkin Specification"],["3.3","Synthetic Test Data Generation"],["3.4","Script Dev & Optimization"],["3.5","RTM Update & Coverage Analysis"]] },
+  { n:4, name:"Test Environment Setup", color:"#F59E0B", bg:"#FFFBEB", pct:"71", optCnt:5, origCnt:7,
+    subs:[["4.1","Env Requirements Definition"],["4.2","IaC Infrastructure Provisioning"],["4.3","Test Data & CI/CD Pipeline"],["4.4","Tools Install & Env Health"],["4.5","Access Mgmt & Security Config"]] },
+  { n:5, name:"Test Execution", color:"#10B981", bg:"#ECFDF5", pct:"100", optCnt:6, origCnt:11,
+    subs:[["5.1","Smoke / Functional / Regression"],["5.2","Integration & End-to-End"],["5.3","Performance / Load / Stress"],["5.4","Security & Penetration"],["5.5","API, Cross-Platform & Visual"],["5.6","Result Recording & Analysis"]] },
+  { n:6, name:"Defect Management", color:"#EF4444", bg:"#FEF2F2", pct:"88", optCnt:5, origCnt:8,
+    subs:[["6.1","Identification & Auto-Logging"],["6.2","Classify, Dedup & Smart Assign"],["6.3","RCA (AI-assisted)"],["6.4","Retest, Verify & Triage"],["6.5","Trend & Pattern Analysis"]] },
+  { n:7, name:"Test Reporting & Metrics", color:"#06B6D4", bg:"#ECFEFF", pct:"100", optCnt:5, origCnt:7,
+    subs:[["7.1","Real-time Dashboards"],["7.2","Quality Gate & Coverage"],["7.3","Risk-based Quality Reporting"],["7.4","Predictive Quality Trend"],["7.5","Stakeholder & Summary Reports"]] },
+  { n:8, name:"Test Closure", color:"#16A34A", bg:"#F0FDF4", pct:"67", optCnt:4, origCnt:6,
+    subs:[["8.1","Exit Criteria & Sign-off"],["8.2","Artifact Archive & KT"],["8.3","Lessons Learned Documentation"],["8.4","Process Improvement"]] },
+  { n:9, name:"Customer Release", color:"#F97316", bg:"#FFF7ED", pct:"71", optCnt:5, origCnt:7,
+    subs:[["9.1","Release Readiness Assessment"],["9.2","UAT Coordination & Monitoring"],["9.3","Go-live & Deployment Verify"],["9.4","Release Notes & Customer Comm"],["9.5","Rollback Plan Validation"]] },
+  { n:10, name:"Post-Release & Prod. Monitoring", color:"#7C3AED", bg:"#F5F3FF", pct:"100", optCnt:5, origCnt:8,
+    subs:[["10.1","Anomaly Detection & Perf Mon."],["10.2","Sentiment & Defect Auto-Triage"],["10.3","SLA Compliance Tracking"],["10.4","Hotfix Testing & Validation"],["10.5","CI Feedback & ML Retraining"]] }
+];
+
+// 4-layer cell data per phase (aligned with optimized sub-activities)
+var MD = {
+  wp: [
+    [{t:"Req Intake & Doc Review Workflow",g:"api"},{t:"Test Basis & RTM Governance",g:"ui"},{t:"Risk Review & Acceptance Board",g:"api"}],
+    [{t:"Test Strategy Approval Flow",g:"api"},{t:"Tool Selection & Entry/Exit Cadence",g:""},{t:"Risk & Resource Review Board",g:""}],
+    [{t:"Test Design Standards",g:""},{t:"Review & Sign-off Workflow",g:"ui"},{t:"Coverage & RTM Governance",g:"api"}],
+    [{t:"Env Request & IaC Approval",g:"api"},{t:"CI/CD & Config Mgmt Process",g:""},{t:"Access & Security Review",g:"api"}],
+    [{t:"Test Execution Workflow",g:"api"},{t:"Daily Tracking & Escalation",g:""},{t:"Multi-suite Coordination",g:"api"}],
+    [{t:"Defect Lifecycle Workflow",g:"api"},{t:"Triage Meeting Cadence",g:""},{t:"RCA Governance Process",g:"ai"}],
+    [{t:"Quality Gate Review Process",g:"api"},{t:"Metrics Review Cadence",g:""},{t:"Stakeholder Briefing Flow",g:"api"}],
+    [{t:"Closure Sign-off Process",g:""},{t:"Artifact Handover Workflow",g:"api"},{t:"Retrospective & Improvement",g:""}],
+    [{t:"Release Approval Gate",g:"api"},{t:"Go-Live Runbook & UAT",g:""},{t:"Customer Notification Flow",g:"api"}],
+    [{t:"Incident Response Process",g:"api"},{t:"SLA Review & Hotfix Cadence",g:""},{t:"Continuous Improvement Loop",g:"ai"}]
+  ],
+  app: [
+    [{t:"Req Intelligence Dashboard",g:"ui"},{t:"RTM Viewer & Quality Console",g:"ui"},{t:"Risk & Acceptance Criteria Hub",g:"ui"}],
+    [{t:"Test Plan Studio UI",g:"ui"},{t:"Risk & Resource Planner",g:"ui"},{t:"Tool Catalog & Criteria Console",g:"ui"}],
+    [{t:"Test Case Designer & BDD Editor",g:"ui"},{t:"Synthetic Data & Script Console",g:"ui"},{t:"Coverage & RTM Viewer",g:"ui"}],
+    [{t:"Env Mgmt & IaC Console",g:"ui"},{t:"CI/CD & Data Pipeline Dash",g:"ui"},{t:"Access & Security UI",g:"ui"}],
+    [{t:"Execution Control Center",g:"ui"},{t:"Live Results Dashboard",g:"ui"},{t:"Multi-device Runner Console",g:"ui"}],
+    [{t:"Defect Tracker & Kanban",g:"ui"},{t:"Smart Bug Report Form",g:"ui"},{t:"Triage Analytics Board",g:"ui"}],
+    [{t:"Quality Metrics BI Dashboard",g:"ui"},{t:"Real-time Analytics Portal",g:"ui"},{t:"Stakeholder Report Hub",g:"ui"}],
+    [{t:"Closure Checklist & Sign-off",g:"ui"},{t:"Artifact Archive Manager",g:"ui"},{t:"Lessons & Improvement Console",g:"ui"}],
+    [{t:"Release Management Dashboard",g:"ui"},{t:"Go-Live & UAT Tracker",g:"ui"},{t:"Customer Comm & Rollback UI",g:"ui"}],
+    [{t:"Production Monitor Dashboard",g:"ui"},{t:"Alert & Incident Console",g:"ui"},{t:"Customer Feedback Analytics",g:"ui"}]
+  ],
+  agt: [
+    [{t:"NL Req Parsing & Classification Agent",g:"ai"},{t:"Feasibility & Quality Analyzer",g:"ai"},{t:"RTM Auto-Generator + Risk Scoring",g:"ai"}],
+    [{t:"Test Strategy AI Advisor",g:"ai"},{t:"Effort Estimator ML Model",g:"ml"},{t:"Risk Scoring & Plan Generator",g:"ai"}],
+    [{t:"Scenario + LLM Test Case Gen Agent",g:"ai"},{t:"BDD Writer & Data Synth Agent",g:"ai"},{t:"Script Dev/Review & Coverage Agent",g:"ai"}],
+    [{t:"IaC Provisioner Agent",g:"ai"},{t:"Env Validator & Drift Detector",g:"ml"},{t:"Access & Security Recommender",g:"ai"}],
+    [{t:"Test Orchestrator Agent",g:"ai"},{t:"Self-Healing Script Agent",g:"ai"},{t:"Visual AI + Perf Analyzer",g:"ml"}],
+    [{t:"Defect Classifier & Severity AI",g:"ai"},{t:"Duplicate Detector Agent",g:"ml"},{t:"RCA Analyzer + Pattern Detector",g:"ai"}],
+    [{t:"Metrics Analytics Intelligence",g:"ai"},{t:"Predictive QA ML Model",g:"ml"},{t:"Auto Report Generator Agent",g:"ai"}],
+    [{t:"Exit Criteria Evaluator Agent",g:"ai"},{t:"Knowledge Extractor Agent",g:"ai"},{t:"Process Optimizer Agent",g:"ml"}],
+    [{t:"Release Gate Validator Agent",g:"ai"},{t:"Deployment Verifier Agent",g:"ai"},{t:"Comms Drafter & Rollback Agent",g:"ai"}],
+    [{t:"Anomaly Detection Agent",g:"ml"},{t:"Customer Feedback Analyzer",g:"ai"},{t:"Hotfix Triage & MLOps Pipeline",g:"ai"}]
+  ],
+  dat: [
+    [{t:"Spec RAG (NVMe/JEDEC/UFS)",g:"rag"},{t:"Requirements Knowledge Base",g:"db"},{t:"RTM Graph & Risk Register",g:"db"}],
+    [{t:"Strategy Templates Library",g:"db"},{t:"Effort Estimation ML Store",g:"ml"},{t:"Risk Pattern KB & Tool Catalog",g:"rag"}],
+    [{t:"Test Case Repository & Index",g:"db"},{t:"Synthetic Test Data Store",g:"db"},{t:"Coverage Matrix & Script Library",g:"db"}],
+    [{t:"Env Config Repo & IaC Templates",g:"db"},{t:"Infrastructure State DB",g:"db"},{t:"Access Matrix & Secrets Vault",g:"db"}],
+    [{t:"Test Execution Results DB",g:"db"},{t:"Test Logs & Artifacts Store",g:"db"},{t:"Execution Baselines & Perf Metrics",g:"db"}],
+    [{t:"Defect Repository & Index",g:"db"},{t:"Pattern Learning KB",g:"rag"},{t:"RCA Knowledge Graph",g:"rag"}],
+    [{t:"Metrics Data Warehouse",g:"db"},{t:"Quality Analytics DB",g:"db"},{t:"Report Templates & Trend Store",g:"db"}],
+    [{t:"Artifact Archive & Version Store",g:"db"},{t:"Lessons Learned KB (RAG)",g:"rag"},{t:"Knowledge Graph & Ontology",g:"rag"}],
+    [{t:"Release History & Audit DB",g:"db"},{t:"Deployment & Rollback Logs",g:"db"},{t:"Customer Comm Templates",g:"db"}],
+    [{t:"Production Telemetry Database",g:"db"},{t:"Real-time Logs Pipeline",g:"db"},{t:"ML Model Registry + Feedback Lake",g:"ml"}]
+  ]
+};
+
+var LAYERS = [
+  { key:"wp", ico:"⬡", num:"L1", nm:"Work Process<br>(Biz Process)",  ds:"Business workflows,<br>governance & user<br>process activities",     color:"#6366F1", lblCls:"lyl-wp",  bgCls:"bg-wp" },
+  { key:"app", ico:"◈", num:"L2", nm:"Application<br>(Viewer)",       ds:"UI services — Web,<br>chatbot, dashboards,<br>Input & Output only", color:"#0EA5E9", lblCls:"lyl-app", bgCls:"bg-app" },
+  { key:"agt", ico:"◐", num:"L3", nm:"Agent<br>(Controller)",         ds:"AI agents, ML models,<br>heuristic algorithms,<br>core business logic", color:"#8B5CF6", lblCls:"lyl-agt", bgCls:"bg-agt" },
+  { key:"dat", ico:"◎", num:"L4", nm:"Data<br>(Model)",               ds:"DB, RAG, Knowledge<br>Base, ML model store,<br>Data pipelines",     color:"#10B981", lblCls:"lyl-dat", bgCls:"bg-dat" }
+];
+
+// Phase nav
+var phNav = document.getElementById("phNav");
+PHASES.forEach(function(p,i){
+  var w = document.createElement("div"); w.className = "pn";
+  w.innerHTML = '<div class="pp" style="background:' + p.bg + ';border:1px solid ' + p.color + '40;color:' + p.color + '">' + p.n + '. ' + p.name + '</div>' + (i<9 ? '<span class="pa">›</span>' : '');
+  phNav.appendChild(w);
+});
+
+// Matrix
+var matrix = document.getElementById("matrix");
+
+// corner
+var corner = document.createElement("div"); corner.className = "mx-corner";
+corner.innerHTML = '<span>AI Layer / STLC Phase</span>';
+matrix.appendChild(corner);
+
+// phase headers
+PHASES.forEach(function(p){
+  var cell = document.createElement("div"); cell.className = "ph-hdr";
+  var subsHtml = p.subs.map(function(s){ return '<div class="sli"><span class="sid">' + s[0] + '</span><span class="stx">' + s[1] + '</span></div>'; }).join('');
+  cell.innerHTML =
+    '<div class="phrow">' +
+      '<div class="phnum" style="background:' + p.color + '">' + p.n + '</div>' +
+      '<div class="phname">' + p.name + '</div>' +
+    '</div>' +
+    '<div class="phchips">' +
+      '<span class="phchip ai-chip">🤖 ' + p.pct + '%</span>' +
+      '<span class="phchip opt-chip">✓ ' + p.optCnt + ' acts</span>' +
+      '<span class="phchip delta-chip">was ' + p.origCnt + '</span>' +
+    '</div>' +
+    '<div class="phsubs">' + subsHtml + '</div>';
+  matrix.appendChild(cell);
+});
+
+// layer rows
+LAYERS.forEach(function(lyr, li){
+  var isLast = (li === LAYERS.length - 1);
+  var lbl = document.createElement("div");
+  lbl.className = "ly-lbl " + lyr.lblCls + (isLast ? " last-ly" : "");
+  lbl.innerHTML =
+    '<div class="ly-ico">' + lyr.ico + '</div>' +
+    '<div class="ly-num" style="color:' + lyr.color + '">' + lyr.num + '</div>' +
+    '<div class="ly-nm">' + lyr.nm + '</div>' +
+    '<div class="ly-ds">' + lyr.ds + '</div>';
+  matrix.appendChild(lbl);
+
+  MD[lyr.key].forEach(function(items, pi){
+    var c = document.createElement("div");
+    c.className = "cell " + lyr.bgCls + (isLast ? " last-ly" : "");
+    var phColor = PHASES[pi].color;
+    var html = items.map(function(it){
+      var tag = it.g ? '<span class="ci-tag tag-' + it.g + '">' + it.g.toUpperCase() + '</span>' : '';
+      return '<div class="ci" style="border-left-color:' + phColor + '60"><div class="ci-dot" style="background:' + phColor + '"></div><span class="ci-txt">' + it.t + '</span>' + tag + '</div>';
+    }).join('');
+    c.innerHTML = html;
+    matrix.appendChild(c);
+  });
+});
+</script>
+</body>
+</html>
