@@ -1,0 +1,336 @@
+<style>
+    .arch-container {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        width: 100%;
+        overflow-x: auto;
+        padding: 20px;
+        background-color: #fafafa;
+    }
+    .arch-table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 1200px;
+        background: #ffffff;
+    }
+    .arch-table th, .arch-table td {
+        border: 1px dashed #cccccc;
+        padding: 12px;
+        vertical-align: top;
+    }
+    /* Headers (Horizontal Phases) */
+    .phase-header-row th {
+        background-color: #2f80ed;
+        color: white;
+        text-align: center;
+        font-weight: 600;
+        font-size: 13px;
+        padding: 10px;
+        border: 1px solid #1b62c4;
+    }
+    .layer-column-header {
+        background-color: #f4f5f7 !important;
+        color: #333333 !important;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle !important;
+        width: 120px;
+        font-size: 14px;
+        border: 1px solid #dddddd !important;
+    }
+    /* Block item stylings */
+    .component-box {
+        border-radius: 4px;
+        padding: 8px;
+        margin-bottom: 8px;
+        font-size: 11px;
+        line-height: 1.4;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        border: 1px solid #ccc;
+    }
+    .process-box { background-color: #ffffff; border: 1px solid #4a90e2; border-left: 4px solid #4a90e2; }
+    .app-box { background-color: #f7f9fc; border: 1px solid #36b37e; border-left: 4px solid #36b37e; }
+    .agent-box { background-color: #fff9e6; border: 1px solid #ffab00; border-left: 4px solid #ffab00; font-weight: 500; }
+    .db-box { background-color: #fff0f5; border: 1px solid #ff5630; border-left: 4px solid #ff5630; }
+    .rag-box { background-color: #f4eafa; border: 1px solid #8e44ad; border-left: 4px solid #8e44ad; }
+    
+    .box-title {
+        font-weight: bold;
+        font-size: 12px;
+        margin-bottom: 4px;
+        color: #222;
+    }
+    .box-subtext {
+        color: #666;
+        font-size: 10px;
+    }
+    .flex-row {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    .flex-child {
+        flex: 1;
+        min-width: 110px;
+    }
+    .arrow-indicator {
+        text-align: center;
+        color: #888;
+        font-size: 14px;
+        margin: 4px 0;
+    }
+</style>
+
+<div class="arch-container">
+    <h2>System Functional Architecture Map</h2>
+    <p style="color:#666; font-size:12px;">Transcribed mapping translated from source flow reference file: <strong>image_5af87f.jpg</strong></p>
+    
+    <table class="arch-table">
+        <thead>
+            <tr class="phase-header-row">
+                <!-- Top-left empty intersection corner -->
+                <th style="background-color: #e2e8f0; border: 1px solid #cbd5e1; width:120px;">Layers / Flows</th>
+                <th style="width: 25%;">Phase 1: Requirements &amp; TC Coverage Analysis<br><span style="font-weight:normal; font-size:11px;">(요구 사항 및 TC Coverage 분석)</span></th>
+                <th style="width: 28%;">Phase 2: Development Verification &amp; Defect Analysis<br><span style="font-weight:normal; font-size:11px;">(개발 검증 (DV/PV 평가 및 불량 분석))</span></th>
+                <th style="width: 24%;">Phase 3: Production Evaluation &amp; Yield Monitoring<br><span style="font-weight:normal; font-size:11px;">(3.6.6.양산성 평가 / 생산성 향상 / 모니터링)</span></th>
+                <th style="width: 23%;">Phase 4: Customer Product Verification<br><span style="font-weight:normal; font-size:11px;">(3.6.7.고객 제품 검증)</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <!-- LAYER 1: WORK PROCESS LAYER -->
+            <tr>
+                <td class="layer-column-header">Work Process Layer<br><span style="font-weight:normal; font-size:10px;">(업무 프로세스)</span></td>
+                <td>
+                    <div class="component-box process-box">
+                        <div class="box-title">Requirement Specification Analysis</div>
+                        <div class="box-subtext">Review targets, milestones, and system specs.</div>
+                    </div>
+                    <div class="component-box process-box">
+                        <div class="box-title">Spec Coverage Verification</div>
+                        <div class="box-subtext">(1) Traceability Matrix Mapping<br>(2) Code-to-Spec Verification (ZTC)</div>
+                    </div>
+                    <div class="component-box process-box">
+                        <div class="box-title">TC Mapping &amp; Coding</div>
+                        <div class="box-subtext">Establish test definitions &amp; scripts.</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="component-box process-box" style="border: 1px solid #d9534f;">
+                        <div class="box-title">Evaluation Execution &amp; Triage</div>
+                        <div class="box-subtext">Run DV/PV assessments, triage immediate blocks.</div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="component-box process-box flex-child">
+                            <div class="box-title">Log Analysis</div>
+                            <div class="box-subtext">Parse engineering logs &amp; memory metrics.</div>
+                        </div>
+                        <div class="component-box process-box flex-child">
+                            <div class="box-title">Defect Tracking (IMS)</div>
+                            <div class="box-subtext">Log issues to Defect Management System.</div>
+                        </div>
+                    </div>
+                    <div class="component-box process-box" style="border: 1px solid #d9534f;">
+                        <div class="box-title">DVR / PVR Report Generation</div>
+                        <div class="box-subtext">Consolidated design/production review documentation output.</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="flex-row">
+                        <div class="component-box process-box flex-child">
+                            <div class="box-title">Manufacturing Execution</div>
+                            <div class="box-subtext">Mass production line processing.</div>
+                        </div>
+                        <div class="component-box process-box flex-child">
+                            <div class="box-title">Manufacturing Tech</div>
+                            <div class="box-subtext">Track process steps &amp; criteria.</div>
+                        </div>
+                    </div>
+                    <div class="component-box process-box" style="border: 1px solid #2ecc71;">
+                        <div class="box-title">Yield &amp; Parameter Data Analysis</div>
+                        <div class="box-subtext">Monitor anomaly signatures, parameter drift, and log-dumps.</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="component-box process-box">
+                        <div class="box-title">Customer Claim Analysis</div>
+                        <div class="box-subtext">Analyze field failures and customer issue reports.</div>
+                    </div>
+                    <div class="component-box process-box">
+                        <div class="box-title">Replication Testing &amp; Verification</div>
+                        <div class="box-subtext">Recreate customer failure modes in localized environments.</div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- LAYER 2: APPLICATION LAYER -->
+            <tr>
+                <td class="layer-column-header">Application Layer<br><span style="font-weight:normal; font-size:10px;">(어플리케이션)</span></td>
+                <td>
+                    <div class="component-box app-box" style="text-align:center; padding: 15px 5px;">
+                        <div class="box-title" style="color:#0052cc;">Requirement-based Coverage Analysis System</div>
+                        <div class="box-subtext">Central platform managing specification gaps.</div>
+                    </div>
+                    <div class="component-box app-box" style="background-color: #fff;">
+                        <div class="box-subtext">⚡ Solution PEN Chat-bot Integration</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="component-box app-box" style="text-align:center; padding: 12px 5px; background-color:#ebf5ff; border: 1px solid #4a90e2;">
+                        <div class="box-title" style="color:#2f80ed;">MARS Suite</div>
+                        <div class="box-subtext">PE Team Evaluation Integration Platform</div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="component-box app-box flex-child"><div class="box-subtext">Dump Ingestion Module</div></div>
+                        <div class="component-box app-box flex-child"><div class="box-subtext">Host Log Parser</div></div>
+                        <div class="component-box app-box flex-child"><div class="box-subtext">External IMS Sync</div></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="component-box app-box">
+                        <div class="box-title">MOS / MES</div>
+                        <div class="box-subtext">Factory Manufacturing Operating Systems.</div>
+                    </div>
+                    <div class="arrow-indicator">⬇ ⬆</div>
+                    <div class="component-box app-box" style="text-align:center; padding: 15px 5px; background-color:#e6f9ff; border: 1px solid #00b4d8;">
+                        <div class="box-title" style="color:#03045e;">OSA Platform</div>
+                        <div class="box-subtext">PE Mass Production Data Analysis System</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="flex-row">
+                        <div class="component-box app-box flex-child">
+                            <div class="box-title">Claim Quality System</div>
+                            <div class="box-subtext">Field claims tracking.</div>
+                        </div>
+                        <div class="component-box app-box flex-child">
+                            <div class="box-title">IMS Backend</div>
+                            <div class="box-subtext">Issue resolution loop.</div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- LAYER 3: AGENT LAYER -->
+            <tr>
+                <td class="layer-column-header">Agent Layer<br><span style="font-weight:normal; font-size:10px;">(인공지능 에이전트)</span></td>
+                <td>
+                    <div class="flex-row">
+                        <div class="component-box agent-box flex-child">
+                            <div class="box-title">Spec Agent</div>
+                            <div class="box-subtext">(CAST Engine)<br>Parses specs &amp; bounds.</div>
+                        </div>
+                        <div class="component-box agent-box flex-child">
+                            <div class="box-title">TC Agent</div>
+                            <div class="box-subtext">(CAST Engine)<br>Validates test code coverage.</div>
+                        </div>
+                    </div>
+                    <div class="component-box agent-box">
+                        <div class="box-title">TC Gen / PEN Agent</div>
+                        <div class="box-subtext">Automates script drafting and script configuration updates.</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="component-box agent-box" style="background-color: #fff9e6;">
+                        <div class="box-title">TC Info Agent</div>
+                        <div class="box-subtext">Queries test-suite historical knowledge.</div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="component-box agent-box flex-child">
+                            <div class="box-title">TC Log Analysis Agent</div>
+                            <div class="box-subtext">(WingMate)<br>Locates pattern failures inside execution logs.</div>
+                        </div>
+                        <div class="component-box agent-box flex-child">
+                            <div class="box-title">Dump Analysis Agent</div>
+                            <div class="box-subtext">(MAGMA Engine)<br>Performs deep stack traces.</div>
+                        </div>
+                    </div>
+                    <div class="component-box agent-box">
+                        <div class="box-title">Bug Triage Agent</div>
+                        <div class="box-subtext">(MAGMA) Dynamically isolates and flags anomaly signatures.</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="component-box agent-box" style="border: 2px double #ffab00;">
+                        <div class="box-title">Yield/Pattern Agent</div>
+                        <div class="box-subtext">(SOLAR-A Suite) Ingests wafer/lot parameters to identify manufacturing variations.</div>
+                    </div>
+                    <div class="component-box agent-box">
+                        <div class="box-title">Anomaly/Trend Detection Agent</div>
+                        <div class="box-subtext">(SOLAR-A Suite) Predicts real-time productivity drift indicators.</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="flex-row">
+                        <div class="component-box agent-box flex-child">
+                            <div class="box-title">Summary Agent</div>
+                            <div class="box-subtext">(SALT) Digests customer text reports.</div>
+                        </div>
+                        <div class="component-box agent-box flex-child">
+                            <div class="box-title">Code Convert Agent</div>
+                            <div class="box-subtext">(SALT) Formats field telemetry.</div>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="component-box agent-box flex-child"><div class="box-title">Device Dump Agent</div></div>
+                        <div class="component-box agent-box flex-child"><div class="box-title">Host Log Agent</div></div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="component-box agent-box flex-child"><div class="box-title">IO Pattern Debug Agent</div></div>
+                        <div class="component-box agent-box flex-child"><div class="box-title">IMX Search Agent</div></div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- LAYER 4: DATA LAYER -->
+            <tr>
+                <td class="layer-column-header">Data Layer<br><span style="font-weight:normal; font-size:10px;">(데이터베이스 / RAG)</span></td>
+                <td>
+                    <div class="component-box db-box">
+                        <div class="box-title">Requirement Analysis DB</div>
+                    </div>
+                    <div class="component-box db-box">
+                        <div class="box-title">Spec-to-TC Mapping DB</div>
+                    </div>
+                    <div class="component-box db-box">
+                        <div class="box-title">Test Case Repository</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="flex-row">
+                        <div class="component-box db-box flex-child"><div class="box-title">TC Pass/Fail History DB</div></div>
+                        <div class="component-box db-box flex-child"><div class="box-title">Failure Oracle DB</div></div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="component-box db-box flex-child"><div class="box-title">IMS Defect DB</div></div>
+                        <div class="component-box db-box flex-child"><div class="box-title">Raw Log DB</div></div>
+                    </div>
+                    <div class="component-box rag-box">
+                        <div class="box-title">Source / Code / Debug RAG</div>
+                        <div class="box-subtext">Vector index of historical source fixes &amp; triage patterns.</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="component-box db-box">
+                        <div class="box-title">Manufacturing Operations DB</div>
+                    </div>
+                    <div class="component-box db-box">
+                        <div class="box-title">Yield &amp; Inline Parameter DB</div>
+                    </div>
+                    <div class="component-box db-box">
+                        <div class="box-title">Core Yield Analytics DB</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="component-box rag-box">
+                        <div class="box-title">FA / Claim RAG Knowledge Base</div>
+                        <div class="box-subtext">(SALT Cluster) Resolves incoming customer claims via historical records.</div>
+                    </div>
+                    <div class="component-box rag-box">
+                        <div class="box-title">Claim-Defect Mapping RAG</div>
+                    </div>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
